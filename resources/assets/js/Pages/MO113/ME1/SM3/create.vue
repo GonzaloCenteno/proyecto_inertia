@@ -1,33 +1,33 @@
 <template>
-    <dashboard-template>
-        <template #cabecera>
-            <div class="navbar-container d-flex content">
-                <div class="bookmark-wrapper d-flex align-items-center">
-                    <div class="demo-inline-spacing">
-                        <loading-button :loading="$store.state.processing" :icon="'add'">Nuevo</loading-button>
-                        <loading-button :loading="$store.state.processing" :icon="'save'" @click.native="submit">Guardar</loading-button>
-                        <loading-button :loading="$store.state.processing" :icon="'edit'">Modificar</loading-button>
-                        <loading-button :loading="$store.state.processing" :icon="'delete'">Eliminar</loading-button>
-                        <loading-button :loading="$store.state.processing" :icon="'close'">Cerrar</loading-button>
-                    </div>
-                </div>
-                <ul class="nav navbar-nav align-items-center ml-auto">
-                    <li class="nav-item d-none d-lg-block"><a class="nav-link nav-link-style"><i class="ficon" data-feather="moon"></i></a></li>
-                    <li class="nav-item nav-search"><a class="nav-link nav-link-search"><i class="ficon" data-feather="search"></i></a>
-                        <div class="search-input">
-                            <div class="search-input-icon"><i data-feather="search"></i></div>
-                            <input class="form-control input" type="text" placeholder="Explore Vuexy..." tabindex="-1" data-search="search">
-                            <div class="search-input-close"><i data-feather="x"></i></div>
-                            <ul class="search-list search-list-main"></ul>
+        <dashboard-template>
+            <template #cabecera>
+                <div class="navbar-container d-flex content">
+                    <div class="bookmark-wrapper d-flex align-items-center">
+                        <div class="demo-inline-spacing">
+                            <loading-button :loading="$store.state.processing" :icon="'add'">Nuevo</loading-button>
+                            <loading-button :loading="$store.state.processing" :icon="'save'" @click.native="submit">Guardar</loading-button>
+                            <loading-button :loading="$store.state.processing" :icon="'edit'">Modificar</loading-button>
+                            <loading-button :loading="$store.state.processing" :icon="'delete'">Eliminar</loading-button>
+                            <loading-button :loading="$store.state.processing" :icon="'close'">Cerrar</loading-button>
                         </div>
-                    </li>  
-                </ul>
-            </div>
-        </template>
-        <template #main>
-            
-        </template>
-    </dashboard-template>
+                    </div>
+                    <ul class="nav navbar-nav align-items-center ml-auto">
+                        <li class="nav-item d-none d-lg-block"><a class="nav-link nav-link-style"><i class="ficon" data-feather="moon"></i></a></li>
+                        <li class="nav-item nav-search"><a class="nav-link nav-link-search"><i class="ficon" data-feather="search"></i></a>
+                            <div class="search-input">
+                                <div class="search-input-icon"><i data-feather="search"></i></div>
+                                <input class="form-control input" type="text" placeholder="Explore Vuexy..." tabindex="-1" data-search="search">
+                                <div class="search-input-close"><i data-feather="x"></i></div>
+                                <ul class="search-list search-list-main"></ul>
+                            </div>
+                        </li>  
+                    </ul>
+                </div>
+            </template>
+            <template #main>
+                
+            </template>
+        </dashboard-template>
 </template>
 
 <script>
@@ -36,6 +36,7 @@ import mapValues from "lodash/mapValues"
 import LoadingButton from '../../../../Components/LoadingButton'
 import DashboardTemplate from './../../../DashboardTemplate'
 import TthdatForm from '../../../../Forms/MO113/ME1/SM3/TthdatForm'
+import { mapGetters } from 'vuex';
 
 export default {
 	name: "MO113ME1SM3CreateLayout",
@@ -43,6 +44,11 @@ export default {
         LoadingButton,
         DashboardTemplate,
         TthdatForm 
+    },
+    computed: {
+        ...mapGetters({
+            fullscreenLoading: 'menuStatus'
+        })
     },
     props:
     { 
@@ -150,9 +156,6 @@ export default {
     },
     mounted() {
         
-    },
-    created() {
-        this.$store.state.fullscreenLoading = false;
     },
 };
 

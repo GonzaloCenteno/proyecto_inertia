@@ -49,7 +49,7 @@ Axios.interceptors.response.use(
                         duration: 3000,
 						offset: 50
                     });
-					store.state.fullscreenLoading = false;
+					// store.state.fullscreenLoading = false;
 					store.state.processing = false;
 				break;
 
@@ -60,7 +60,7 @@ Axios.interceptors.response.use(
                         duration: 3000,
 						offset: 50
                     });
-					store.state.fullscreenLoading = false;
+					// store.state.fullscreenLoading = false;
 					store.state.processing = false;
 			}
 			return Promise.reject(error.response);

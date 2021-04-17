@@ -24,7 +24,7 @@ html .content {
   -webkit-backface-visibility : hidden;
           backface-visibility : hidden;
   min-height : calc(100% - 3.35rem);
-  margin-left : 330px;
+  margin-left : 340px;
 }
 
 html .content.app-content {
@@ -570,11 +570,11 @@ html .pace .pace-progress {
 */
 @media (min-width: 992px) {
   body .content-right {
-    width : calc(100vw - (100vw - 100%) - 330px);
+    width : calc(100vw - (100vw - 100%) - 340px);
     float : right;
   }
   body .content-left {
-    width : calc(100vw - (100vw - 100%) - 330px);
+    width : calc(100vw - (100vw - 100%) - 340px);
     float : left;
   }
   body .content-detached {
@@ -582,22 +582,22 @@ html .pace .pace-progress {
   }
   body .content-detached.content-right {
     float : right;
-    margin-left : -330px;
+    margin-left : -340px;
   }
   body .content-detached.content-right .content-body {
-    margin-left : calc(330px + 2rem);
+    margin-left : calc(340px + 2rem);
   }
   body .content-detached.content-left {
     float : left;
-    margin-right : -330px;
+    margin-right : -340px;
   }
   body .content-detached.content-left .content-body {
-    margin-right : calc(330px + 2rem);
+    margin-right : calc(340px + 2rem);
   }
   .sidebar-right.sidebar-sticky {
     float : right !important;
-    margin-left : -330px;
-    width : 330px !important;
+    margin-left : -340px;
+    width : 340px !important;
     margin-top : 5.7rem;
   }
 }
@@ -691,7 +691,7 @@ html .pace .pace-progress {
 }
 
 .sidebar-detached .sidebar {
-  width : 330px;
+  width : 340px;
 }
 
 @media (min-width: 992px) {
@@ -864,10 +864,6 @@ footer.footer-border {
   color : #565360;
   background : whitesmoke;
   border-radius : 6px;
-}
-
-.main-menu.menu-light .navigation > li:not(.open) > ul {
-  display : none;
 }
 
 .main-menu.menu-light .navigation > li:not(.open) > ul .active {
@@ -1174,7 +1170,7 @@ footer.footer-border {
 
 .main-menu .navbar-header {
   height : 100%;
-  width : 330px;
+  width : 340px;
   height : 4.45rem;
   position : relative;
   padding : 0.35rem 1rem 0.3rem 1.64rem;

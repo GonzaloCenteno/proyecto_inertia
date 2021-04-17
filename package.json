@@ -31,6 +31,7 @@
         "pdfmake": "^0.1.70",
         "popper.js": "^1.16.1",
         "vuex": "^3.6.2",
+        "vuex-persistedstate": "^4.0.0-beta.3",
         "zingchart": "^2.9.3",
         "zingchart-vue": "^2.0.3"
     }

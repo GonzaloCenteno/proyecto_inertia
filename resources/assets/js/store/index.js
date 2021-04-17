@@ -1,6 +1,8 @@
+import createPersistedState from 'vuex-persistedstate';
 export default {
+	plugins: [createPersistedState()],
 	state: {
-		fullscreenLoading: false,
+		fullscreenLoading: true,
 		processing: false,
 		errors: [],
 		showModal: false,
@@ -17,6 +19,9 @@ export default {
 		// getModulos(state, data){
 		// 	state.modulos = data;
 		// }
+		setMenuStatus(state){
+			state.fullscreenLoading = !state.fullscreenLoading ;
+		}
 	},
 	actions: {
 		// setModulos({ commit }) {
@@ -27,5 +32,13 @@ export default {
 		// 		console.log('Algo salio mal');
 		// 	});
 		// }
+		setMenuStatus({commit}) {
+			commit('setMenuStatus')
+		},
+	},
+	getters: {
+		menuStatus: (state) => {
+		  return state.fullscreenLoading;
+		},
 	}
 }

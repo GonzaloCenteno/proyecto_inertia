@@ -29,7 +29,7 @@ mix.styles([
 	.js('resources/assets/js/app.js', 'public/js')
 	.scripts([
 		'resources/vendor/js/vendors.min.js',
-		'resources/vendor/js/app-menu.js',
-		'resources/vendor/js/app.js',
+		// 'resources/vendor/js/app-menu.js',
+		// 'resources/vendor/js/app.js',
       	//'resources/vendor/js/dashboard-ecommerce.js',
 	], 'public/js/plantilla.js');
